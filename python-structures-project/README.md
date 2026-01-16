@@ -1,0 +1,2 @@
+This is a project made for my semester final in programming 2, however I may continue this eventually as a personal project as this system could be quite interesting to work with
+In other words, expect more to come :)
