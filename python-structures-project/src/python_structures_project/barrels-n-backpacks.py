@@ -33,3 +33,10 @@ barrel = [
     {'baslot': 9, 'itemID': 0, 'quantity': 0},
 ]
 
+#dictionary for item ids? i dont know if this is how it works
+items = [
+    {'ItemID': 1, 'Name': "Wooden Sword", 'MaxQuantity': 1},
+    {'ItemID': 2, 'Name': "Health Potion", 'MaxQuantity': 5},
+    {'ItemID': 3, 'Name': "Wooden Round Shield", 'MaxQuantity': 1},
+    {'ItemID': 4, 'Name': "Gold Coin", 'MaxQuantity': 999},
+]
