@@ -33,12 +33,13 @@ def start():
         "Gold Coin",
     )
     print("I've added", backpack_inventory, "to the backpack.")
+    step_1(backpack_inventory)
 
 def add_item_barrel():
     add_item_id = input("What Item ID would you like to add? ")
     if add_item_id == 1:
-        barrel_inventory += "Wooden Sword"
-        print("Added", ItemID(1), "To the barrel.")
+        barrel_inventory += items(0)
+        print("Added", items(0), "To the barrel.")
         step_1()
     else:
         step_1()
@@ -46,17 +47,17 @@ def add_item_barrel():
 def remove_item_barrel():
     remove_item_id = input("What Item ID would you like removed? ")
     if remove_item_id == 1:
-        barrel_inventory -= "Wooden Sword"
-        print("Removed", ItemID(1), "from the barrel.")
+        barrel_inventory -= items(0)
+        print("Removed", items(0), "from the barrel.")
         step_2()
     else:
         step_2()
 
-def step_1():
+def step_1(backpack):
     step_1_question = input("Would you like to add any items to the barrel? ")
-    if step_1_question.lower == "yes":
+    if step_1_question.lower() == "yes":
         add_item_barrel()
-    elif step_1_question.lower == "no":
+    else:
         step_2()
 
 def step_2():
