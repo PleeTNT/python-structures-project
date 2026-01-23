@@ -7,7 +7,7 @@ Please excuse the jank! It'll be better I swear!
 '''
 #(personal note) Python Programming, for the absolute beginner - Michael Dawson, second edition
 
-#dictionary for item ids? i dont know if this is how it works
+#dictionary for item ids
 items = [
     {'ItemID': 1, 'Name': "Wooden Sword", 'MaxQuantity': 1},
     {'ItemID': 2, 'Name': "Health Potion", 'MaxQuantity': 5},
@@ -17,9 +17,11 @@ items = [
 ]
 
 def start():
-    backpack_inventory = ()
+    global backpack_inventory
+    global barrel_inventory  
     barrel_inventory = ()
-
+    backpack_inventory = ()  
+    
     print("Greetings!")
     print("There is currently", len(backpack_inventory), "items in the backpack.")
     print("There is currently", len(barrel_inventory), "items in the barrel.")
@@ -31,5 +33,8 @@ def start():
         "Gold Coin",
     )
     print("I've added", backpack_inventory, "to the backpack.")
+
+#def step_1():
+
 
 start()
