@@ -17,8 +17,6 @@ items = [
 ]
 
 def start():
-    global backpack_inventory
-    global barrel_inventory  
     barrel_inventory = ()
     backpack_inventory = ()  
     
@@ -27,44 +25,44 @@ def start():
     print("There is currently", len(barrel_inventory), "items in the barrel.")
 
     print("Let's help get you started, yes?")
-    backpack_inventory = (
+    backpack_inventory += (
         "Wooden Sword",
         "Leather Armor",
         "Gold Coin",
     )
     print("I've added", backpack_inventory, "to the backpack.")
-    step_1(backpack_inventory)
 
-def add_item_barrel():
-    add_item_id = input("What Item ID would you like to add? ")
-    if add_item_id == 1:
-        barrel_inventory += items(0)
-        print("Added", items(0), "To the barrel.")
-        step_1()
-    else:
-        step_1()
-
-def remove_item_barrel():
-    remove_item_id = input("What Item ID would you like removed? ")
-    if remove_item_id == 1:
-        barrel_inventory -= items(0)
-        print("Removed", items(0), "from the barrel.")
-        step_2()
-    else:
-        step_2()
-
-def step_1(backpack):
-    step_1_question = input("Would you like to add any items to the barrel? ")
-    if step_1_question.lower() == "yes":
-        add_item_barrel()
-    else:
-        step_2()
-
-def step_2():
-    step_2_question = input("Would you like to remove anything from the barrel? ")
-    if step_2_question.lower == "yes":
-        remove_item_barrel()
+def menu(backpack):
+    print("1: Add an item to the backpack"
+          "2: Remove an item from the backpack"
+          "3: Move an item from the backpack to the barrel"
+          "4: Move an item from the barrel to the backpack"
+          "5: List both inventories"
+          "6: Exit")
+    menu_option = input("What would you like to do? ")
+    if menu_option == "1":
         
 
-start()
-step_1()
+
+
+def add_item_backpack(backpack_inventory):
+    add_item_id = input("What Item ID would you like to add? ")
+    if add_item_id == 1:
+        backpack_inventory += items(0)
+        print("Added", items(0), "To the backpack.")
+
+    else:
+
+
+def remove_item_backpack(backpack_inventory):
+    remove_item_id = input("What Item ID would you like removed? ")
+    if remove_item_id == 1:
+        backpack_inventory -= items(0)
+        print("Removed", items(0), "from the backpack.")
+
+    else:
+
+
+
+start()  
+menu()
