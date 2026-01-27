@@ -59,35 +59,40 @@ def menu(backpack_inventory, barrel_inventory):
 
 def add_item_backpack(backpack_inventory):
     add_item_id = input("What Item ID would you like to add? ")
-    if add_item_id == 1:
-        backpack_inventory += items[0]
-        print("Added", items[0], "To the backpack.")
-
+    if add_item_id <= 5:
+        backpack_inventory += items[add_item_id - 1]
+        print("Added", items[add_item_id - 1], "to the backpack.")
     else:
+        print("Item ID not recognized.")
 
 
 def remove_item_backpack(backpack_inventory):
     remove_item_id = input("What Item ID would you like removed? ")
-    if remove_item_id == 1:
-        backpack_inventory -= items[0]
-        print("Removed", items[0], "from the backpack.")
+    if remove_item_id <= 5:
+        backpack_inventory -= items[remove_item_id - 1]
+        print("Removed", items[remove_item_id - 1], "from the backpack.")
+        return backpack_inventory
     else:
+        print("Item ID not recognized.")
 
 def move_backpack_to_barrel(backpack_inventory, barrel_inventory):
     move_item_id = input("What Item ID would you like to move to the barrel? ")
-    if move_item_id == 1:
-        backpack_inventory -= items[0]
-        barrel_inventory += items[0]
-        print("Moved", items[0], "to the barrel.")
+    if move_item_id <= 5:
+        backpack_inventory -= items[move_item_id - 1]
+        barrel_inventory += items[move_item_id - 1]
+        print("Moved", items[move_item_id - 1], "to the barrel.")
+        return backpack_inventory, barrel_inventory
     else:
+        print("Item ID not recognized.")
 
 def move_barrel_to_backpack(backpack_inventory, barrel_inventory):
     move_item_id = input("What Item ID would you like to move to the backpack? ")
-    if move_item_id == 1:
-        barrel_inventory -= items[0]
-        backpack_inventory += items[0]
-        print("Moved", items[0], "to the backpack.")
+    if move_item_id <= 5:
+        barrel_inventory -= items[move_item_id - 1]
+        backpack_inventory += items[move_item_id - 1]
+        print("Moved", items[move_item_id - 1], "to the backpack.")
     else:
+        print("Item ID not recognized.")
 
 def list_inventories(backpack_inventory, barrel_inventory):
     print("Backpack Inventory:", backpack_inventory)
