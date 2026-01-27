@@ -15,4 +15,10 @@ ItemID 3 Name = "Wooden Round Shield"
 ItemID 4 Name = "Gold Coin"
 ItemID 5 Name = "Leather Armor"
 
+Two main errors are if you don't have the required amount of items in the barrel or backpack
+when you are moving it between inventories, it breaks the entire code,
+and also you can only add 1 item at a time with no cap to the items currently.
+This is what I plan to fix next opportunity I get, however in the state that the project is in now,
+I believe that it is perfect as is for a "rough draft" of sorts.
+
 Thank you for your assistance and for the fun project, I look forward to finishing this next semester :]
