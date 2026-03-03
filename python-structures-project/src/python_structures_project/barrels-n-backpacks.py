@@ -167,6 +167,7 @@ def list_inventories(backpack_inventory, barrel_inventory):
     print("Backpack Inventory:", backpack_inventory)
     print("Barrel Inventory:", barrel_inventory)
 
+#Displays the IDs of the items and the names of the items
 def list_item_ids(items):
     for item in items:
         print(f"{item['ItemID']}: {item['Name']}")
